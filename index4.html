@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIKROTEK</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background:#0f172a;
+            color:white;
+        }
+
+        nav{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:20px 60px;
+            background:#111827;
+        }
+
+        .logo{
+            font-size:28px;
+            font-weight:bold;
+        }
+
+        .menu a{
+            color:white;
+            text-decoration:none;
+            margin-left:20px;
+        }
+
+        .hero{
+            height:80vh;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            padding:20px;
+        }
+
+        .hero h1{
+            font-size:70px;
+            margin-bottom:20px;
+        }
+
+        .hero p{
+            max-width:700px;
+            font-size:20px;
+            margin-bottom:30px;
+        }
+
+        .btn{
+            background:#2563eb;
+            color:white;
+            border:none;
+            padding:15px 30px;
+            margin:10px;
+            border-radius:8px;
+            cursor:pointer;
+            font-size:16px;
+        }
+
+        .btn:hover{
+            background:#1d4ed8;
+        }
+
+        .section{
+            padding:80px 50px;
+            text-align:center;
+        }
+
+        .cards{
+            display:flex;
+            justify-content:center;
+            gap:20px;
+            flex-wrap:wrap;
+            margin-top:30px;
+        }
+
+        .card{
+            width:300px;
+            background:#1e293b;
+            padding:25px;
+            border-radius:12px;
+        }
+
+        footer{
+            background:#111827;
+            text-align:center;
+            padding:20px;
+            margin-top:50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">MIKROTEK</div>
+
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+
+        <h1>Welcome to MIKROTEK</h1>
+
+        <p>
+            India's Trusted Partner for Wire Drawing Dies,
+            Precision Engineering and Industrial Manufacturing Solutions.
+        </p>
+
+        <div>
+            <button class="btn">Products</button>
+            <button class="btn">Contact Us</button>
+            <button class="btn">About Us</button>
+        </div>
+
+    </section>
+
+    <section class="section">
+
+        <h2>Our Services</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Wire Drawing Dies</h3>
+                <p>
+                    High precision wire drawing dies for industrial applications.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Engineering Solutions</h3>
+                <p>
+                    Advanced manufacturing and precision engineering services.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Industrial Support</h3>
+                <p>
+                    Complete technical support for wire processing industries.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        © 2026 MIKROTEK. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
