@@ -6,11 +6,12 @@
 <title>MIKROTEK</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
+    font-family:Arial,sans-serif;
     scroll-behavior:smooth;
 }
 
@@ -40,7 +41,6 @@ nav{
     color:white;
     text-decoration:none;
     margin-left:20px;
-    transition:.3s;
 }
 
 .menu a:hover{
@@ -66,15 +66,15 @@ section{
 }
 
 .hero p{
-    max-width:800px;
     font-size:20px;
+    max-width:700px;
     margin-bottom:30px;
 }
 
 .btn{
     background:#2563eb;
-    border:none;
     color:white;
+    border:none;
     padding:15px 30px;
     border-radius:8px;
     cursor:pointer;
@@ -89,52 +89,52 @@ section{
 .section-title{
     text-align:center;
     font-size:40px;
-    margin-bottom:50px;
+    margin-bottom:40px;
 }
 
 .cards{
     display:flex;
     justify-content:center;
-    gap:25px;
     flex-wrap:wrap;
+    gap:25px;
 }
 
 .card{
     background:#1e293b;
-    width:320px;
+    width:300px;
     padding:25px;
     border-radius:12px;
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-10px);
 }
 
 .card h3{
     margin-bottom:15px;
 }
 
-.about-content{
+.about{
     max-width:900px;
     margin:auto;
     text-align:center;
     line-height:1.8;
-    font-size:18px;
 }
 
 .contact-box{
     max-width:700px;
     margin:auto;
+    text-align:center;
     background:#1e293b;
     padding:40px;
     border-radius:15px;
-    text-align:center;
 }
 
 .contact-box p{
     margin:15px 0;
-    font-size:18px;
+}
+
+.message{
+    margin-top:20px;
+    color:#60a5fa;
+    font-size:22px;
+    font-weight:bold;
 }
 
 footer{
@@ -142,6 +142,7 @@ footer{
     text-align:center;
     padding:25px;
 }
+
 </style>
 </head>
 
@@ -167,10 +168,15 @@ footer{
         Precision Engineering and Industrial Manufacturing Solutions.
     </p>
 
-    <div>
-        <button class="btn">Products</button>
-        <button class="btn">Contact Us</button>
-    </div>
+    <button class="btn">
+        Products
+    </button>
+
+    <button class="btn" onclick="showMessage()">
+        Contact Us
+    </button>
+
+    <div id="homeMessage" class="message"></div>
 
 </section>
 
@@ -182,23 +188,17 @@ footer{
 
         <div class="card">
             <h3>Wire Drawing Dies</h3>
-            <p>
-                Premium quality wire drawing dies for high precision manufacturing.
-            </p>
+            <p>High precision dies for industrial wire manufacturing.</p>
         </div>
 
         <div class="card">
             <h3>PCD Dies</h3>
-            <p>
-                Long-life polycrystalline diamond dies for industrial applications.
-            </p>
+            <p>Premium polycrystalline diamond dies for long life.</p>
         </div>
 
         <div class="card">
             <h3>Tungsten Carbide Dies</h3>
-            <p>
-                Durable and cost-effective solutions for wire production.
-            </p>
+            <p>Durable solutions for demanding manufacturing needs.</p>
         </div>
 
     </div>
@@ -209,7 +209,7 @@ footer{
 
     <h2 class="section-title">About Us</h2>
 
-    <div class="about-content">
+    <div class="about">
 
         <p>
             MIKROTEK is a leading manufacturer of wire drawing dies,
@@ -219,9 +219,9 @@ footer{
         <br>
 
         <p>
-            Our mission is to provide world-class manufacturing excellence,
-            innovative engineering and reliable industrial support to customers
-            across India and international markets.
+            We help industries achieve higher productivity through
+            innovative engineering, advanced manufacturing and
+            world-class quality standards.
         </p>
 
     </div>
@@ -235,14 +235,15 @@ footer{
     <div class="contact-box">
 
         <p><strong>Company:</strong> MIKROTEK</p>
-
         <p><strong>Email:</strong> info@mikrotek.in</p>
-
         <p><strong>Phone:</strong> +91 XXXXX XXXXX</p>
-
         <p><strong>Location:</strong> Bangalore, India</p>
 
-        <button class="btn">Send Enquiry</button>
+        <button class="btn" onclick="showMessage()">
+            Send Enquiry
+        </button>
+
+        <div id="contactMessage" class="message"></div>
 
     </div>
 
@@ -251,6 +252,22 @@ footer{
 <footer>
     © 2026 MIKROTEK. All Rights Reserved.
 </footer>
+
+<script>
+
+function showMessage(){
+
+    alert("Welcome to MIKROTEK!");
+
+    document.getElementById("homeMessage").innerHTML =
+    "Thank you for contacting MIKROTEK!";
+
+    document.getElementById("contactMessage").innerHTML =
+    "Thank you for contacting MIKROTEK! We will reach out to you shortly.";
+
+}
+
+</script>
 
 </body>
 </html>
