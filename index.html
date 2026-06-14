@@ -6,7 +6,6 @@
 <title>MIKROTEK</title>
 
 <style>
-
 *{
     margin:0;
     padding:0;
@@ -24,11 +23,11 @@ nav{
     position:fixed;
     top:0;
     width:100%;
+    background:#111827;
     display:flex;
     justify-content:space-between;
     align-items:center;
     padding:20px 50px;
-    background:#111827;
     z-index:1000;
 }
 
@@ -66,8 +65,8 @@ section{
 }
 
 .hero p{
+    max-width:800px;
     font-size:20px;
-    max-width:700px;
     margin-bottom:30px;
 }
 
@@ -88,20 +87,20 @@ section{
 
 .section-title{
     text-align:center;
-    font-size:40px;
     margin-bottom:40px;
+    font-size:40px;
 }
 
 .cards{
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
-    gap:25px;
+    gap:20px;
 }
 
 .card{
-    background:#1e293b;
     width:300px;
+    background:#1e293b;
     padding:25px;
     border-radius:12px;
 }
@@ -126,10 +125,6 @@ section{
     border-radius:15px;
 }
 
-.contact-box p{
-    margin:15px 0;
-}
-
 .message{
     margin-top:20px;
     color:#60a5fa;
@@ -140,9 +135,8 @@ section{
 footer{
     background:#111827;
     text-align:center;
-    padding:25px;
+    padding:20px;
 }
-
 </style>
 </head>
 
@@ -161,22 +155,19 @@ footer{
 
 <section id="home" class="hero">
 
-    <h1>Welcome to MIKROTEK</h1>
+    <h1 id="companyName"></h1>
 
-    <p>
-        India's Trusted Partner for Wire Drawing Dies,
-        Precision Engineering and Industrial Manufacturing Solutions.
-    </p>
-
-    <button class="btn">
-        Products
-    </button>
+    <p id="companyDescription"></p>
 
     <button class="btn" onclick="showMessage()">
         Contact Us
     </button>
 
-    <div id="homeMessage" class="message"></div>
+    <button class="btn" onclick="changeCompanyName()">
+        Change Company Name
+    </button>
+
+    <div id="message" class="message"></div>
 
 </section>
 
@@ -188,17 +179,17 @@ footer{
 
         <div class="card">
             <h3>Wire Drawing Dies</h3>
-            <p>High precision dies for industrial wire manufacturing.</p>
+            <p>High precision dies for industrial manufacturing.</p>
         </div>
 
         <div class="card">
             <h3>PCD Dies</h3>
-            <p>Premium polycrystalline diamond dies for long life.</p>
+            <p>Premium polycrystalline diamond dies.</p>
         </div>
 
         <div class="card">
             <h3>Tungsten Carbide Dies</h3>
-            <p>Durable solutions for demanding manufacturing needs.</p>
+            <p>Durable solutions for production industries.</p>
         </div>
 
     </div>
@@ -212,16 +203,8 @@ footer{
     <div class="about">
 
         <p>
-            MIKROTEK is a leading manufacturer of wire drawing dies,
-            precision engineering products and industrial solutions.
-        </p>
-
-        <br>
-
-        <p>
-            We help industries achieve higher productivity through
-            innovative engineering, advanced manufacturing and
-            world-class quality standards.
+            MIKROTEK specializes in wire drawing dies,
+            industrial manufacturing and precision engineering.
         </p>
 
     </div>
@@ -234,16 +217,13 @@ footer{
 
     <div class="contact-box">
 
-        <p><strong>Company:</strong> MIKROTEK</p>
-        <p><strong>Email:</strong> info@mikrotek.in</p>
-        <p><strong>Phone:</strong> +91 XXXXX XXXXX</p>
-        <p><strong>Location:</strong> Bangalore, India</p>
+        <p>Email: info@mikrotek.in</p>
+        <p>Phone: +91 XXXXX XXXXX</p>
+        <p>Location: Bangalore, India</p>
 
         <button class="btn" onclick="showMessage()">
             Send Enquiry
         </button>
-
-        <div id="contactMessage" class="message"></div>
 
     </div>
 
@@ -255,15 +235,31 @@ footer{
 
 <script>
 
+let company = "MIKROTEK";
+
+let description =
+"India's Trusted Partner for Wire Drawing Dies and Precision Engineering Solutions.";
+
+document.getElementById("companyName").innerHTML = company;
+
+document.getElementById("companyDescription").innerHTML = description;
+
+console.log(company);
+
 function showMessage(){
 
-    alert("Welcome to MIKROTEK!");
+    alert("Welcome to " + company);
 
-    document.getElementById("homeMessage").innerHTML =
-    "Thank you for contacting MIKROTEK!";
+    document.getElementById("message").innerHTML =
+    "Thank you for contacting " + company + "!";
 
-    document.getElementById("contactMessage").innerHTML =
-    "Thank you for contacting MIKROTEK! We will reach out to you shortly.";
+}
+
+function changeCompanyName(){
+
+    company = "MIKROTEK INDUSTRIES";
+
+    document.getElementById("companyName").innerHTML = company;
 
 }
 
